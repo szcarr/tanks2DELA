@@ -1,0 +1,18 @@
+int key = 2; //Gul / Global variable
+
+void setup() {
+    pinMode(key, INPUT_PULLUP);
+}
+
+void loop() {
+    if (isKeyConnected()) {
+    //put code here
+}
+
+bool isKeyConnected() {
+    digitalWrite(key, HIGH);
+    if (digitalRead(key) == HIGH) {
+        return true;
+    }
+    return false;
+}
